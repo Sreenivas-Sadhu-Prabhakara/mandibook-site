@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="MandiBook — every lot, split and settled. A KARYA studio build.">
+  <title>MandiBook — every lot, split &amp; settled</title>
+
+  <!-- warm harvest-paper base -->
+  <rect width="1200" height="630" fill="#FAF7EF"/>
+
+  <!-- faint ledger rules -->
+  <g stroke="#E5E0CE" stroke-width="2">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="230" x2="1200" y2="230"/>
+    <line x1="0" y1="310" x2="1200" y2="310"/>
+    <line x1="0" y1="390" x2="1200" y2="390"/>
+    <line x1="0" y1="470" x2="1200" y2="470"/>
+  </g>
+
+  <!-- green accent band down the left, like a bahi-khata margin -->
+  <rect x="0" y="0" width="18" height="630" fill="#65a30d"/>
+  <rect x="90" y="0" width="2" height="630" fill="#E2E9CE"/>
+
+  <!-- logo mark -->
+  <g transform="translate(96,74)">
+    <rect x="0" y="0" width="72" height="66" rx="8" fill="#65a30d"/>
+    <rect x="0" y="0" width="19" height="66" rx="8" fill="#4d7c0f"/>
+    <path d="M32 22h30M32 36h30M32 50h20" stroke="#FAF7EF" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- brand name -->
+  <text x="188" y="127" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-1">
+    <tspan fill="#1C2410">Mandi</tspan><tspan fill="#65a30d">Book</tspan>
+  </text>
+
+  <!-- headline -->
+  <text x="96" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#1C2410">Every lot,</text>
+  <text x="96" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#65a30d">split &amp; settled.</text>
+
+  <!-- tagline -->
+  <text x="98" y="482" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="500" fill="#4C5540">Commission &amp; mandi-fee split, farmer payments &amp; the daily patti — for arhtiyas.</text>
+
+  <!-- footer row: KARYA wordmark + subscription note -->
+  <g transform="translate(96,556)">
+    <rect x="0" y="-26" width="150" height="42" rx="21" fill="#65a30d"/>
+    <text x="75" y="2" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3" fill="#FAF7EF">KARYA</text>
+    <text x="172" y="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#4C5540">studio build · subscription · pricing on discovery</text>
+  </g>
+
+  <!-- mini lot-bill chip, top-right, echoing the product -->
+  <g transform="translate(792,96)">
+    <rect x="0" y="0" width="312" height="200" rx="16" fill="#FFFFFF" stroke="#D2D6BE" stroke-width="2"/>
+    <text x="24" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#1C2410">Lot bill · Wheat</text>
+    <rect x="222" y="24" width="70" height="26" rx="13" fill="#E2E9CE"/>
+    <text x="257" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#4d7c0f">Split</text>
+
+    <text x="24" y="92" font-family="-apple-system, sans-serif" font-size="17" fill="#4C5540">Gross · 20 qtl</text>
+    <text x="288" y="92" text-anchor="end" font-family="'SF Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#1C2410">Rs 48,000</text>
+
+    <text x="24" y="126" font-family="-apple-system, sans-serif" font-size="17" fill="#4C5540">Commission 2.5%</text>
+    <text x="288" y="126" text-anchor="end" font-family="'SF Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#65a30d">Rs 1,200</text>
+
+    <line x1="24" y1="150" x2="288" y2="150" stroke="#E5E0CE" stroke-width="2"/>
+    <text x="24" y="182" font-family="-apple-system, sans-serif" font-size="14" fill="#4C5540">Net to farmer</text>
+    <text x="288" y="182" text-anchor="end" font-family="'SF Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#65a30d">Rs 46,320</text>
+  </g>
+</svg>

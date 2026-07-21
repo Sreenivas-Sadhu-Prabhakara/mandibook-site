@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MandiBook — commission & patti day-book for APMC arhtiyas</title>
+  <meta name="description" content="Record farmer lots, auto-split commission and mandi fee, pay farmers and track buyer outstanding, with a daily patti tallied for you. Built for APMC commission agents (arhtiya) — book a discovery call." />
+  <meta name="keywords" content="arhtiya software, commission agent app, mandi patti, APMC commission, farmer payment ledger, buyer outstanding, aadhatiya day-book, mandi accounting India" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/" />
+  <meta name="theme-color" content="#65a30d" />
+  <meta name="author" content="KARYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KARYA" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="MandiBook — commission & patti day-book for APMC arhtiyas" />
+  <meta property="og:description" content="Record farmer lots, auto-split commission and mandi fee, pay farmers and track buyer outstanding, with a daily patti tallied for you. Built for APMC commission agents (arhtiya) — book a discovery call." />
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/" />
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MandiBook — farmer lots, commission & mandi-fee split, farmer payments and buyer outstanding, with the day's patti tallied for the arhtiya." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MandiBook — commission & patti day-book for APMC arhtiyas" />
+  <meta name="twitter:description" content="Record farmer lots, auto-split commission and mandi fee, pay farmers and track buyer outstanding, with a daily patti tallied for you. Built for APMC commission agents (arhtiya) — book a discovery call." />
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/og.png" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/og.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kaarya-bench.pages.dev/#org",
+        "name": "KARYA",
+        "url": "https://kaarya-bench.pages.dev/",
+        "email": "sreeni.nintendo@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/#website",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/",
+        "name": "MandiBook",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://kaarya-bench.pages.dev/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MandiBook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/",
+        "image": "https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/og.png",
+        "description": "A mandi day-book for APMC commission agents (arhtiya): record each farmer lot, auto-split the commission and mandi fee to get the net payable to the farmer, pay farmers and track buyer outstanding, and read the day's patti with commission earned rolled up automatically.",
+        "inLanguage": ["en-IN", "hi-IN"],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "audience": { "@type": "BusinessAudience" },
+        "provider": { "@type": "Organization", "name": "KARYA" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "description": "Subscription — pricing shared on a discovery call"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is the commission and mandi fee worked out on a lot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You enter the weight in kilograms and the rate per quintal, and MandiBook computes the gross (weight ÷ 100 × rate). Your commission percentage and the mandi fee percentage come off the gross, and what's left is the net payable to the farmer. You see all four figures — gross, commission, fee, net — the instant you enter the lot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My buyers pay on credit over several days. Does that work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Record each collection from a buyer against their lots and MandiBook carries the running outstanding forward. The buyers board always shows exactly who still owes you and how much, so credit never gets lost between mandi days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pay a farmer part now and the rest later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pay any amount against a farmer's net and MandiBook tracks the remaining due. Each payout is recorded against the lot, so the farmers board shows the running dues you still owe across every farmer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the daily patti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pick a date and the patti lists every lot booked that day — farmer, buyer, crop, gross, commission, mandi fee and net — with the day's totals tallied at the foot. It's the same day-sheet you write by hand today, computed for you and ready to read."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first users."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "KARYA · On the Bench",
+            "item": "https://kaarya-bench.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MandiBook",
+            "item": "https://sreenivas-sadhu-prabhakara.github.io/mandibook-site/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="MandiBook home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="MandiBook logo">
+            <rect x="3" y="4" width="26" height="24" rx="3" fill="#65a30d"/>
+            <rect x="3" y="4" width="7" height="24" rx="3" fill="#4d7c0f"/>
+            <path d="M14 10h11M14 16h11M14 22h7" stroke="#FAF7EF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">Mandi<span class="brand__book">Book</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20MandiBook" class="btn btn--sm">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">The arhtiya's day-book</p>
+          <h1 class="hero__title" id="hero-title">Every lot,<br /><span class="accent-word">split & settled.</span></h1>
+          <p class="hero__pain">
+            A farmer's lot sells, commission and the mandi fee come off, the farmer
+            gets paid, the buyer still owes on credit. MandiBook does that arithmetic
+            for every lot and hands you the day's patti — tallied, not scribbled.
+          </p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--lg">Book today's lots &rarr;</a>
+            <a href="#how" class="btn-link">See how it works</a>
+          </div>
+          <p class="hero__note"><span class="dot"></span>For APMC commission agents (arhtiya / aadhatiya) · subscription · pricing on discovery</p>
+        </div>
+
+        <!-- SIGNATURE WIDGET: live lot bill -->
+        <aside class="register" aria-label="Live lot bill demo">
+          <div class="register__head">
+            <div>
+              <p class="register__label">Lot bill</p>
+              <p class="register__month" id="reg-month">Kishan Verma · Wheat</p>
+            </div>
+            <span class="register__pill">Auto-split</span>
+          </div>
+          <ul class="register__rows" id="reg-rows">
+            <li class="reg-row" data-state="paid">
+              <span class="reg-row__name">Gross <em>· 20 qtl @ Rs 2,400</em></span>
+              <span class="reg-row__amt">Rs 48,000</span>
+              <span class="reg-row__tag tag--paid">Booked</span>
+            </li>
+            <li class="reg-row" data-state="due">
+              <span class="reg-row__name">Commission <em>· 2.5% (your earning)</em></span>
+              <span class="reg-row__amt">Rs 1,200</span>
+              <span class="reg-row__tag tag--due" id="reg-live-tag">Yours</span>
+            </li>
+            <li class="reg-row" data-state="overdue">
+              <span class="reg-row__name">Mandi fee <em>· 1% APMC cess</em></span>
+              <span class="reg-row__amt">Rs 480</span>
+              <span class="reg-row__tag tag--over">Deducted</span>
+            </li>
+          </ul>
+          <div class="register__foot">
+            <div class="regstat">
+              <span class="regstat__label">Net to farmer</span>
+              <span class="regstat__val regstat__val--in" id="reg-collected">Rs 46,320</span>
+            </div>
+            <div class="regstat">
+              <span class="regstat__label">Buyer owes</span>
+              <span class="regstat__val regstat__val--out" id="reg-pending">Rs 48,000</span>
+            </div>
+          </div>
+          <p class="register__caption" id="reg-caption">Enter weight &amp; rate → commission, fee and net computed instantly.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem" aria-label="The problem">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">01 · The problem</p>
+        <div class="two-col">
+          <h2 class="section__title">You run the mandi.<br />The parchis run you.</h2>
+          <div class="prose">
+            <p>
+              A busy mandi day is dozens of lots, split three ways — farmer, agent,
+              mandi — and half your buyers on credit. Your whole system is a
+              <strong>paper bahi-khata, a pile of kacchi parchis, and your head</strong>
+              — and by evening the tally never quite closes.
+            </p>
+          </div>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🧮</span>
+            <h3>The same split, forty times a day</h3>
+            <p>Weight into gross, commission off, mandi fee off, net to the farmer — simple arithmetic, but repeated on every lot until a slip costs you real money.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">📓</span>
+            <h3>The bahi-khata is one spill from gone</h3>
+            <p>Farmer dues and buyer credit live in a ledger only you can read. Carrying a buyer's balance across three mandi days is a note in the margin — until it isn't.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🤝</span>
+            <h3>Who still owes whom?</h3>
+            <p>You owe farmers their net; buyers owe you on the goods. Both move every day. Knowing your true position at any moment means flipping through weeks of parchis.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🌙</span>
+            <h3>The patti won't tally at night</h3>
+            <p>End of day you add up gross, commission earned and dues by hand. One transposed figure and you're re-checking the whole sheet under a tube-light.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHT ============ -->
+    <section class="insight" id="insight" aria-label="The insight">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--light">02 · The insight</p>
+        <blockquote class="insight__quote">
+          A mandi lot is the most <span class="hl">mechanical</span> money there
+          is — weight times rate, minus two fixed cuts — yet it's still split
+          <span class="hl">by hand</span>, lot after lot, on a paper parchi.
+        </blockquote>
+        <p class="insight__punch">
+          MandiBook's whole job is to take that one deterministic sum and run it as a
+          cycle — <strong>book the lot, split it three ways, settle both sides</strong> —
+          so the farmer's net, your commission and the buyer's outstanding are exact
+          before the parchi is even torn.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-label="How it works">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">03 · How it works</p>
+        <h2 class="section__title">Book a lot once. The split and the patti follow.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <div>
+              <h3>Record the lot</h3>
+              <p>Pick the farmer, the buyer, the crop, the weight in kg and the rate per quintal. MandiBook computes the gross the moment you type — no calculator.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <div>
+              <h3>The split happens automatically</h3>
+              <p>Your commission % and the mandi fee % come off the gross → the net payable to the farmer. Your earning on the lot is shown right there on the bill.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <div>
+              <h3>Settle both sides</h3>
+              <p>Pay the farmer against the net — part or full — and MandiBook tracks the running due. Record buyer collections against the gross and it carries the outstanding forward.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">4</span>
+            <div>
+              <h3>Read the patti, watch the dashboard</h3>
+              <p>The day-sheet lists every lot with its totals; the dashboard rolls up commission earned today and this month, total farmer dues and total buyer outstanding.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section--tint" id="features" aria-label="What's inside">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">04 · What's inside</p>
+        <h2 class="section__title">The whole mandi day, in one book.</h2>
+
+        <div class="feat-grid">
+          <article class="feat">
+            <h3>Lot entry with a live bill</h3>
+            <p>Weight × rate → gross, commission and mandi fee off, net to the farmer — all computed as you type. Enter the lot, book it, done.</p>
+          </article>
+          <article class="feat">
+            <h3>Three-way split, exact</h3>
+            <p>Farmer, agent and mandi settled to the rupee on every lot. Your commission earning is never a guess or an evening's arithmetic.</p>
+          </article>
+          <article class="feat">
+            <h3>Farmer dues board</h3>
+            <p>A running balance per farmer — the net you owe, minus what you've paid. Part-payments welcome; the due always carries forward correctly.</p>
+          </article>
+          <article class="feat">
+            <h3>Buyer outstanding board</h3>
+            <p>Every buyer's open credit in one place. Record collections against the gross and MandiBook keeps the outstanding true across mandi days.</p>
+          </article>
+          <article class="feat">
+            <h3>Daily patti, tallied</h3>
+            <p>Pick a date; see every lot with gross, commission, fee and net, plus the day's totals at the foot. The bahi-khata sheet, computed for you.</p>
+          </article>
+          <article class="feat">
+            <h3>Commission dashboard</h3>
+            <p>Earned today and this month, total farmer dues, total buyer outstanding — your true position at a glance, the moment you open the book.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT PREVIEW ============ -->
+    <section class="section" id="preview" aria-label="The dashboard">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">05 · The dashboard</p>
+        <h2 class="section__title">Open it after the auction. See the whole day in ten seconds.</h2>
+
+        <div class="screen" role="img" aria-label="MandiBook dashboard preview showing commission earned today 6,240 rupees and this month 91,500 rupees, total farmer dues 62,000 rupees and buyer outstanding 1,84,000 rupees, with the day's patti listing four lots.">
+          <!-- browser chrome -->
+          <div class="screen__bar">
+            <span class="screen__dot"></span><span class="screen__dot"></span><span class="screen__dot"></span>
+            <span class="screen__url">app.mandibook.in / Verma Trading Co.</span>
+          </div>
+
+          <div class="screen__body">
+            <div class="screen__topline">
+              <div>
+                <p class="screen__hello">Ram Ram, Verma ji</p>
+                <p class="screen__sub">Verma Trading Co. · Khanna mandi · 19 Jul 2026</p>
+              </div>
+              <span class="screen__tag">Patti · 14 lots today</span>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpis">
+              <div class="kpi kpi--in">
+                <p class="kpi__label">Commission today</p>
+                <p class="kpi__val">Rs 6,240</p>
+                <div class="kpi__bar"><span style="width:68%"></span></div>
+                <p class="kpi__meta">this month · Rs 91,500</p>
+              </div>
+              <div class="kpi kpi--out">
+                <p class="kpi__label">Farmer dues</p>
+                <p class="kpi__val">Rs 62,000</p>
+                <div class="kpi__bar kpi__bar--out"><span style="width:40%"></span></div>
+                <p class="kpi__meta">4 farmers unpaid</p>
+              </div>
+              <div class="kpi kpi--flat">
+                <p class="kpi__label">Buyer outstanding</p>
+                <p class="kpi__val">Rs 1,84,000</p>
+                <p class="kpi__meta">3 buyers on credit</p>
+              </div>
+            </div>
+
+            <!-- patti table -->
+            <div class="tablecard">
+              <div class="tablecard__head">
+                <p>Today's patti</p>
+                <span class="tablecard__hint">gross · commission · net</span>
+              </div>
+              <div class="tablescroll">
+                <table class="dtable">
+                  <thead>
+                    <tr>
+                      <th>Farmer / crop</th><th>Buyer</th><th class="num">Gross</th><th class="num">Comm.</th><th>Net &amp; status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Kishan Verma · Wheat</td><td>Aggarwal Grains</td>
+                      <td class="num">48,000</td><td class="num">1,200</td>
+                      <td><span class="s s--paid">Net 46,320 · paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>Balwinder Singh · Paddy</td><td>Sharma Rice Mill</td>
+                      <td class="num">57,600</td><td class="num">1,440</td>
+                      <td><span class="s s--due">Net 55,584 · due</span></td>
+                    </tr>
+                    <tr>
+                      <td>Gurmeet Kaur · Mustard</td><td>Aggarwal Grains</td>
+                      <td class="num">44,000</td><td class="num">1,100</td>
+                      <td><span class="s s--due">Net 42,460 · part-paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>Ramphal Yadav · Wheat</td><td>Deep Traders</td>
+                      <td class="num">40,800</td><td class="num">1,020</td>
+                      <td><span class="s s--over">Buyer credit open</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--tint" id="pricing" aria-label="Pricing">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">06 · Pricing</p>
+        <div class="price-wrap">
+          <div class="price-copy">
+            <h2 class="section__title">Simple subscription. However many lots you handle.</h2>
+            <p class="prose">
+              If MandiBook catches <strong>one mis-split or forgotten buyer credit
+              a week</strong> that would otherwise have leaked, it's already paid for
+              itself many times over — and you've bought back the nights you spend
+              re-tallying the patti.
+            </p>
+            <ul class="price-includes">
+              <li>Unlimited farmers, buyers &amp; lots</li>
+              <li>Auto commission + mandi-fee split on every lot</li>
+              <li>Farmer dues &amp; buyer outstanding boards</li>
+              <li>Daily patti + commission dashboard</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <p class="price-card__eyebrow">MandiBook</p>
+            <p class="price-card__amt" style="font-size:34px;">Pricing on discovery</p>
+            <p class="price-card__line">Subscription basis</p>
+            <p class="prose" style="color:color-mix(in srgb, var(--paper) 82%, transparent);margin:0 0 22px;">
+              We set pricing on a short discovery call and bill it as a simple monthly
+              subscription — sized to how many lots you book. Early users get founder terms.
+            </p>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20MandiBook" class="btn btn--lg btn--block">Book a discovery call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO + FAQ ============ -->
+    <section class="section" id="faq" aria-label="Who it's for and frequently asked questions">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">07 · Who it's for &amp; questions</p>
+        <div class="who-grid">
+          <div class="who">
+            <h2 class="section__title section__title--sm">Built for the mandi arhtiya, not the corporate trading desk.</h2>
+            <p class="prose">
+              MandiBook is for the <strong>commission agent at an APMC mandi</strong> —
+              the arhtiya (aadhatiya) dealing in grain, paddy and mustard, handling a
+              handful of buyer firms and many farmers. Big enough that the splits and
+              the credit eat your evenings; small enough that mill-grade ERP is overkill.
+              If you run it on a bahi-khata and parchis today, this is for you.
+            </p>
+            <div class="who-tags">
+              <span>APMC arhtiyas</span>
+              <span>Aadhatiyas</span>
+              <span>Grain &amp; paddy agents</span>
+              <span>Family commission firms</span>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>How is the commission and mandi fee worked out on a lot?</summary>
+              <p>You enter the weight in kilograms and the rate per quintal, and MandiBook computes the gross (weight ÷ 100 × rate). Your commission percentage and the mandi fee percentage come off the gross, and what's left is the net payable to the farmer. You see all four figures — gross, commission, fee, net — the instant you enter the lot.</p>
+            </details>
+            <details>
+              <summary>My buyers pay on credit over several days. Does that work?</summary>
+              <p>Yes. Record each collection from a buyer against their lots and MandiBook carries the running outstanding forward. The buyers board always shows exactly who still owes you and how much, so credit never gets lost between mandi days.</p>
+            </details>
+            <details>
+              <summary>Can I pay a farmer part now and the rest later?</summary>
+              <p>Yes. Pay any amount against a farmer's net and MandiBook tracks the remaining due. Each payout is recorded against the lot, so the farmers board shows the running dues you still owe across every farmer.</p>
+            </details>
+            <details>
+              <summary>What is the daily patti?</summary>
+              <p>Pick a date and the patti lists every lot booked that day — farmer, buyer, crop, gross, commission, mandi fee and net — with the day's totals tallied at the foot. It's the same day-sheet you write by hand today, computed for you and ready to read.</p>
+            </details>
+            <details>
+              <summary>What does it cost?</summary>
+              <p>Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first users.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="MandiBook logo">
+              <rect x="3" y="4" width="26" height="24" rx="3" fill="#65a30d"/>
+              <rect x="3" y="4" width="7" height="24" rx="3" fill="#4d7c0f"/>
+              <path d="M14 10h11M14 16h11M14 22h7" stroke="#FAF7EF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__name">Mandi<span class="brand__book">Book</span></span>
+        </span>
+        <p class="footer__tag">Every lot, split &amp; settled.</p>
+      </div>
+      <div class="footer__meta">
+        <p class="footer__studio">A <strong>KARYA</strong> studio build</p>
+        <a class="footer__mail" href="mailto:sreeni.nintendo@gmail.com">sreeni.nintendo@gmail.com</a>
+        <p class="footer__fine">© 2026 MandiBook · Made in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
